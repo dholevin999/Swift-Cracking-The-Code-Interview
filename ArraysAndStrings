@@ -11,3 +11,14 @@ func isUnique(str: String) -> Bool {
     
     return true
 }
+
+// 1.2: Write code to reverse a C-Style String. (C-String means that “abcd” is represented as  ve characters, including the null character.)
+func reverseString(str: String) -> String {
+    var result = ""
+    
+    for index in 0..<str.characters.count {
+        result.append(str[str.index(str.endIndex, offsetBy: -index-1)])
+    }
+    
+    return result
+}
