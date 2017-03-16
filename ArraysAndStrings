@@ -1,0 +1,13 @@
+// 1.1: Implement an algorithm to determine if a string has all unique characters. What if you can not use additional data structures?
+func isUnique(str: String) -> Bool {
+    for index in 0..<str.characters.count {
+        let letter = str[str.index(str.startIndex, offsetBy: index)]
+        for index2 in index+1..<str.characters.count {
+            if letter == str[str.index(str.startIndex, offsetBy: index2)] {
+                return false
+            }
+        }
+    }
+    
+    return true
+}
